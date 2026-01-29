@@ -15,8 +15,12 @@ Including another URLconf
 """
 
 from django.contrib import admin
+
+import os
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from . import views
 
 router = DefaultRouter()
@@ -26,8 +30,21 @@ router.register(r'activities', views.ActivityViewSet)
 router.register(r'workouts', views.WorkoutViewSet)
 router.register(r'leaderboard', views.LeaderboardViewSet)
 
+
+# Custom API root to return the codespace URL
+@csrf_exempt
+def api_root_with_url(request):
+    codespace_name = os.environ.get('CODESPACE_NAME')
+    if codespace_name:
+        api_url = f"https://{codespace_name}-8000.app.github.dev/api/"
+    else:
+        api_url = "http://localhost:8000/api/"
+    return JsonResponse({"api_url": api_url})
+
+from django.urls import re_path
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.api_root, name='api_root'),
-    path('', include(router.urls)),
+    path('api/', api_root_with_url, name='api_root'),
+    re_path(r'^api/', include(router.urls)),
 ]
