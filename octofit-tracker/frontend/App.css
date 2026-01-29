@@ -1,0 +1,205 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #222b45;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Navigation Bar */
+
+
+/* Navigation Bar (Bootstrap override/enhancement) */
+.navbar {
+  background: linear-gradient(90deg, #2e3192 0%, #1bffff 100%) !important;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff !important;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+.navbar-brand img {
+  height: 40px;
+  width: 40px;
+  margin-right: 12px;
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+  color: #2e3192 !important;
+  background: #ffb347;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #2e3192;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Buttons */
+.btn-primary, button.btn-primary {
+  background: linear-gradient(90deg, #1bffff 0%, #2e3192 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary:hover, button.btn-primary:hover {
+  background: linear-gradient(90deg, #ffb347 0%, #2e3192 100%);
+  color: #2e3192;
+}
+
+/* Tables */
+.table {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+.table-primary th {
+  background: linear-gradient(90deg, #2e3192 0%, #1bffff 100%);
+  color: #fff;
+}
+tr:nth-child(even) td {
+  background: #f3f8ff;
+}
+tr:hover td {
+  background: #e0eafc;
+}
+
+/* Links */
+a {
+  color: #2e3192;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #ffb347;
+}
+
+/* App Container */
+.App {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #2e3192;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Buttons */
+button, .btn {
+  background: linear-gradient(90deg, #1bffff 0%, #2e3192 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(44, 62, 80, 0.08);
+  transition: background 0.2s, color 0.2s;
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #ffb347 0%, #2e3192 100%);
+  color: #222b45;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+th {
+  background: linear-gradient(90deg, #2e3192 0%, #1bffff 100%);
+  color: #fff;
+  font-weight: 600;
+}
+tr:nth-child(even) {
+  background: #f3f8ff;
+}
+tr:hover {
+  background: #e0eafc;
+}
+
+/* Links */
+a {
+  color: #2e3192;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #ffb347;
+}
+
+/* App Container */
+.App {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+}
+
+/* Utility Classes */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
